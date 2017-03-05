@@ -8,9 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/testvideo', function(req, res, next) {
-	res.writeHead(200, {'Content-Type': 'video/mp4'});
-	var rs = fs.createReadStream('public/candle.mp4');
-	rs.pipe(res);
+	res.render('testvideo');
 });
 
 module.exports = router;
