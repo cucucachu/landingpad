@@ -2,28 +2,7 @@ extends layout
 
 block content
 	h2 Upload
-	div(class = "input-group")
 
-	div(class="container" style="margin-top: 20px;")
-		div(class="row")
-			div
-				div(class="input-group")
-					span(class="input-group-btn")
-						span(class="btn btn-primary btn-file")
-							File 
-							input(type="file" single)
-	br
-
-	form#form_submit_work(name="submitWork", method="post", action="/submitWork")
-		div(class="form-group")
-			label(for="file" class="btn btn-default btn-file") File
-				input#file(type="file", class="form-control", name="file")
-		div(class="form-group")
-			label(for="file_name") Name
-				input#file_name(type="text", class="form-control", name="file_name")
-		button#submit_work(class="btn btn-primary", type="submit") Submit
-
-	script(type='text/javascript', src="javascripts/fileInput.js")
 
 	br
 
@@ -37,3 +16,7 @@ block content
 				a(href="#") TV Show
 			li
 				a(href="#") Other
+
+	br
+
+	button(type="button" class="btn btn-success") Upload
