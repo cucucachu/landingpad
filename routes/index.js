@@ -3,6 +3,10 @@ var router = express.Router();
 var fs = require('fs');
 
 /* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('upload', { title: 'Express' });
+});
+
 router.get('/upload', function(req, res, next) {
   res.render('upload', { title: 'Express' });
 });
