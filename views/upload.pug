@@ -21,6 +21,19 @@ block content
 		div(class="form-group")
 			label(for="file_name") Name
 				input#file_name(type="text", class="form-control", name="file_name")
-		button#submit_work(class="btn btn-primary", type="submit") submit
+		button#submit_work(class="btn btn-primary", type="submit") Submit
 
 	script(type='text/javascript', src="javascripts/fileInput.js")
+
+	br
+
+	div(class="dropdown")
+		button(class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown") Type 
+			span(class="caret")
+		ul(class="dropdown-menu")
+			li
+				a(href="#") Movie
+			li
+				a(href="#") TV Show
+			li
+				a(href="#") Other
