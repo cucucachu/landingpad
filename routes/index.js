@@ -23,4 +23,8 @@ router.get('/testvideo', function(req, res, next) {
 	res.render('testvideo');
 });
 
+router.get('/submit', function(req, res, next) {
+    uploadController.uploadVideo(req, res, next);
+});
+
 module.exports = router;
