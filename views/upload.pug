@@ -3,20 +3,12 @@ extends layout
 block content
 	h2 Upload
 
-	<div>
-
-		<input type="file" name="file" style="visibility:hidden;" id="file">
-		<label>Choose A File</label>
-		<div class="input-append">
-			<!-- This input is here purely for cosmetic reasons. The actual file is uploaded from the hidden input box !-->
-			<input type="text" id="subfile" class="input-xlarge">
-			<a class="btn" onclick="$('#file').click();">Browse</a>
-		</div>
-		
-	</div>
-
-
-	 
+	div
+		input(type="file" name="file" style="visibility:hidden;" id="file")
+		label Choose A File
+		div(class="input-append")
+			input(type="text" id="subfile" class="input-xlarge")
+			a(class="btn" onclick="$('#file').click();") Browse
 	br
 
 	div(class="dropdown")
