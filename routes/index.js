@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-
+var uploadController = require('../controllers/uploadController.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('upload', { title: 'Express' });
@@ -24,7 +24,7 @@ router.get('/testvideo', function(req, res, next) {
 });
 
 router.get('/submit', function(req, res, next) {
-    uploadController.uploadVideo(req, res, next);
+    uploadController.hello(req, res, next);
 });
 
 module.exports = router;

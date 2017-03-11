@@ -15,10 +15,10 @@ Attachment = gridfs.model;
  
 //create or save a file 
 Attachment.write({
-  filename:'sample.txt', 
-  contentType:'text/plain'
-  }, 
-  fs.createReadStream('/some/path/sample.txt'), 
+  filename:'The Friends of Eddie Coyle.mp4',
+  contentType:'video/mp4'
+  },
+  fs.createReadStream('/Users/Gregory/Movies/Eddie.mp4'),
   function(error, createdFile){
 });
  

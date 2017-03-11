@@ -19,7 +19,13 @@ $('#upload').click(function(){
 });
 
 function shipOff(event) {
-    var result = event.target.result;
-    var fileName = document.getElementById('file').files[0].name; //Should be 'picture.jpg'
-    $.post('/submit', { data: result, name: fileName }, continueSubmission);
+    try {
+      var result = event.target.result;
+      var fileName = document.getElementById('file').files[0].name; //Should be 'picture.jpg'
+      $.post('/submit', { data: result, name: fileName }, continueSubmission);
+    }
+    catch(e){
+      console.log(e);
+    }
+
   }
